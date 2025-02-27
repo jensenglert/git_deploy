@@ -1,0 +1,93 @@
+guid: 00b6590c-3706-4e8a-9e7d-2f2f99a15a01
+table:
+  name: TS_METADATA_OBJECT
+  db: CS_TOOLS
+  schema: ANALYTICS
+  db_table: TS_METADATA_OBJECT
+  connection:
+    name: snowflake
+    fqn: c300ede6-3dbd-489c-bfd0-29a2e42be517
+  columns:
+  - name: OBJECT_GUID
+    db_column_name: OBJECT_GUID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NAME
+    db_column_name: NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DESCRIPTION
+    db_column_name: DESCRIPTION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AUTHOR_GUID
+    db_column_name: AUTHOR_GUID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATED
+    db_column_name: CREATED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: MODIFIED
+    db_column_name: MODIFIED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: OBJECT_TYPE
+    db_column_name: OBJECT_TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: OBJECT_SUBTYPE
+    db_column_name: OBJECT_SUBTYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  rls_rules:
+    tables:
+    - name: TS_METADATA_OBJECT
+      fqn: 00b6590c-3706-4e8a-9e7d-2f2f99a15a01
+    - name: TS_USER
+      fqn: 5932506e-c661-491f-80fc-54201f631ba7
+    joins:
+    - name: TS_METADATA_OBJECT_to_TS_USER
+      source: TS_METADATA_OBJECT
+      destination: TS_USER
+      type: INNER
+      is_one_to_one: false
+    table_paths:
+    - id: TS_USER_1
+      table: TS_USER
+      join_path:
+      - join:
+        - TS_METADATA_OBJECT_to_TS_USER
+      column:
+      - EMAIL
+    rules:
+    - name: email
+      expr: "ts_username = [TS_USER_1::EMAIL]"
+  joins_with:
+  - name: TS_METADATA_OBJECT_to_TS_USER
+    destination:
+      name: TS_USER
+      fqn: 5932506e-c661-491f-80fc-54201f631ba7
+    "on": "[TS_METADATA_OBJECT::AUTHOR_GUID] = [TS_USER::USER_GUID]"
+    type: INNER
+  properties:
+    sage_config:
+      is_sage_enabled: true

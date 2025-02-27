@@ -1,0 +1,63 @@
+guid: 352f85e2-9221-4165-935d-b7516e34c385
+table:
+  name: TS_GROUP
+  db: CS_TOOLS
+  schema: ANALYTICS
+  db_table: TS_GROUP
+  connection:
+    name: snowflake
+    fqn: c300ede6-3dbd-489c-bfd0-29a2e42be517
+  columns:
+  - name: GROUP_GUID
+    db_column_name: GROUP_GUID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: GROUP_NAME
+    db_column_name: GROUP_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DESCRIPTION
+    db_column_name: DESCRIPTION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DISPLAY_NAME
+    db_column_name: DISPLAY_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SHARING_VISIBILITY
+    db_column_name: SHARING_VISIBILITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATED
+    db_column_name: CREATED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: MODIFIED
+    db_column_name: MODIFIED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: GROUP_TYPE
+    db_column_name: GROUP_TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    sage_config:
+      is_sage_enabled: true
