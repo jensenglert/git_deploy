@@ -1,0 +1,51 @@
+guid: f8472155-e41a-49c8-b8af-408f43f2e945
+table:
+  name: TS_TAG
+  db: CS_TOOLS
+  schema: ANALYTICS
+  db_table: TS_TAG
+  connection:
+    name: snowflake
+    fqn: c300ede6-3dbd-489c-bfd0-29a2e42be517
+  columns:
+  - name: TAG_GUID
+    db_column_name: TAG_GUID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TAG_NAME
+    db_column_name: TAG_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AUTHOR_GUID
+    db_column_name: AUTHOR_GUID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATED
+    db_column_name: CREATED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: MODIFIED
+    db_column_name: MODIFIED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: COLOR
+    db_column_name: COLOR
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    sage_config:
+      is_sage_enabled: true

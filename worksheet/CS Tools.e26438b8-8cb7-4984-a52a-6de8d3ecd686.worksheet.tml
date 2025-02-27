@@ -1,0 +1,99 @@
+guid: e26438b8-8cb7-4984-a52a-6de8d3ecd686
+model:
+  name: CS Tools
+  model_tables:
+  - name: TS_COLUMN_SYNONYM
+    fqn: d1a252e3-90cd-4c0b-b948-75fb8d38ca9c
+    joins:
+    - with: TS_METADATA_COLUMN
+      referencing_join: TS_METADATA_COLUMN_to_TS_COLUMN_SYNONYM
+  - name: TS_DEPENDENT_OBJECT
+    fqn: 76cf765a-c48b-478a-a5ff-fbdb5e9e30ef
+    joins:
+    - with: TS_METADATA_COLUMN
+      referencing_join: TS_METADATA_COLUMN_to_TS_DEPENDENT_OBJECT
+  - name: TS_GROUP
+    fqn: 352f85e2-9221-4165-935d-b7516e34c385
+  - name: TS_GROUP_PRIVILEGE
+    fqn: 7b022495-6b9a-448c-88ba-6149163265a9
+    joins:
+    - with: TS_GROUP
+      referencing_join: TS_GROUP_PRIVILEGE_to_TS_GROUP
+  - name: TS_SHARING_ACCESS
+    fqn: 745c5bd1-8e41-43c1-a80a-8a7e52bf8f26
+    joins:
+    - with: TS_GROUP
+      referencing_join: TS_SHARING_ACCESS_to_TS_GROUP
+    - with: TS_METADATA_OBJECT
+      referencing_join: TS_METADATA_OBJECT_to_TS_SHARING_ACCESS
+  - name: TS_METADATA_COLUMN
+    fqn: c125c950-7c2f-47dc-b8a6-18838fa749ff
+    joins:
+    - with: TS_METADATA_OBJECT
+      referencing_join: TS_METADATA_COLUMN_to_TS_METADATA_OBJECT
+  - name: TS_METADATA_OBJECT
+    fqn: 00b6590c-3706-4e8a-9e7d-2f2f99a15a01
+    joins:
+    - with: TS_USER
+      referencing_join: TS_METADATA_OBJECT_to_TS_USER
+  - name: TS_TAGGED_OBJECT
+    fqn: add3b093-c39e-49d7-a126-fad0d1139c73
+    joins:
+    - with: TS_METADATA_OBJECT
+      referencing_join: TS_TAGGED_OBJECT_to_TS_METADATA_OBJECT
+    - with: TS_TAG
+      referencing_join: TS_TAGGED_OBJECT_to_TS_TAG
+  - name: TS_TAG
+    fqn: f8472155-e41a-49c8-b8af-408f43f2e945
+  - name: TS_USER
+    fqn: 5932506e-c661-491f-80fc-54201f631ba7
+  columns:
+  - name: Synonym
+    column_id: TS_COLUMN_SYNONYM::SYNONYM
+    properties:
+      column_type: ATTRIBUTE
+  - name: Name
+    column_id: TS_DEPENDENT_OBJECT::NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Group Name
+    column_id: TS_GROUP::GROUP_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Privilege
+    column_id: TS_GROUP_PRIVILEGE::PRIVILEGE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Column Name
+    column_id: TS_METADATA_COLUMN::COLUMN_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Object Guid
+    column_id: TS_METADATA_OBJECT::OBJECT_GUID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Shared To User Guid
+    column_id: TS_SHARING_ACCESS::SHARED_TO_USER_GUID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Shared To Group Guid
+    column_id: TS_SHARING_ACCESS::SHARED_TO_GROUP_GUID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Share Mode
+    column_id: TS_SHARING_ACCESS::SHARE_MODE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Tag Name
+    column_id: TS_TAG::TAG_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Username
+    column_id: TS_USER::USERNAME
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    sage_config:
+      is_sage_enabled: true

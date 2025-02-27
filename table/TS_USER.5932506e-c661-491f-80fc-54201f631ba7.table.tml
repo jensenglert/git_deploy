@@ -1,0 +1,63 @@
+guid: 5932506e-c661-491f-80fc-54201f631ba7
+table:
+  name: TS_USER
+  db: CS_TOOLS
+  schema: ANALYTICS
+  db_table: TS_USER
+  connection:
+    name: snowflake
+    fqn: c300ede6-3dbd-489c-bfd0-29a2e42be517
+  columns:
+  - name: USER_GUID
+    db_column_name: USER_GUID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: USERNAME
+    db_column_name: USERNAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EMAIL
+    db_column_name: EMAIL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DISPLAY_NAME
+    db_column_name: DISPLAY_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SHARING_VISIBILITY
+    db_column_name: SHARING_VISIBILITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATED
+    db_column_name: CREATED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: MODIFIED
+    db_column_name: MODIFIED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: USER_TYPE
+    db_column_name: USER_TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    sage_config:
+      is_sage_enabled: true
