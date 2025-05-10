@@ -1,0 +1,67 @@
+guid: 96ddbe4d-352a-4749-9244-527c30f5b47d
+liveboard:
+  name: jens.englert@thoughtspot.com's first Liveboard
+  description: add my description
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Column Name, Name"
+      tables:
+      - id: CS Tools
+        name: CS Tools
+        fqn: e26438b8-8cb7-4984-a52a-6de8d3ecd686
+      search_query: "[Column Name] [Name] [Privilege] [Share Mode] [Shared To User Guid] [Synonym]"
+      answer_columns:
+      - name: Column Name
+      - name: Name
+      - name: Privilege
+      - name: Share Mode
+      - name: Shared To User Guid
+      - name: Synonym
+      table:
+        table_columns:
+        - column_id: Column Name
+          show_headline: false
+        - column_id: Name
+          show_headline: false
+        - column_id: Privilege
+          show_headline: false
+        - column_id: Share Mode
+          show_headline: false
+        - column_id: Shared To User Guid
+          show_headline: false
+        - column_id: Synonym
+          show_headline: false
+        ordered_column_ids:
+        - Column Name
+        - Name
+        - Privilege
+        - Share Mode
+        - Shared To User Guid
+        - Synonym
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Column Name\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Privilege\",\"columnProperty\": {}},{\"columnId\": \"Share Mode\",\"columnProperty\": {}},{\"columnId\": \"Shared To User Guid\",\"columnProperty\": {}},{\"columnId\": \"Synonym\",\"columnProperty\": {}}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Column Name
+        - column_id: Name
+        - column_id: Privilege
+        - column_id: Share Mode
+        - column_id: Shared To User Guid
+        - column_id: Synonym
+        axis_configs:
+        - x:
+          - Column Name
+          "y":
+          - Privilege
+          color:
+          - Share Mode
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Share Mode\",\"columnProperty\": {}},{\"columnId\": \"Privilege\",\"columnProperty\": {}},{\"columnId\": \"Synonym\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Column Name\",\"columnProperty\": {}},{\"columnId\": \"Shared To User Guid\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2bb5b39c-8b99-4f55-833e-5de435cc77ae\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Privilege\"],\"isOpposite\": false}},{\"id\": \"b67b4d1f-0e1d-4951-b335-f40becb9f89c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Column Name\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: a03d2b8d-9bae-48bb-b9a3-1e153a9a8653
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
